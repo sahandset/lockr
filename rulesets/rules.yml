@@ -1,0 +1,6 @@
+AWS Access Key: "AKIA[0-9A-Z]{16}"
+JWT: "eyJ[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+"
+Password: "(?i)password\\s*=\\s*.+"
+Debug Mode: "(?i)debug\\s*=\\s*true"
+Slack Webhook: "https://hooks.slack.com/services/\\w+/\\w+/\\w+"
+Stripe Key: "sk_live_[0-9a-zA-Z]{24}"
