@@ -13,7 +13,6 @@ It supports built-in and custom rules, redacted output, machine-readable results
 - `--test` mode for CI pipelines (non-zero exit if issues found)
 - `--redact` mode to mask sensitive values in output
 - Color-coded, tab-aligned output for easy readability
-- Unit tested, semantically versioned, and CI-ready
 
 ---
 
