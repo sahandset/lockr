@@ -1,4 +1,4 @@
-# Lockr
+# Lockr 🔒
 
 **Lockr** is a fast, pluggable CLI tool written in Go to scan `.env`, `.yaml`, `.json`, and other config files for hardcoded secrets and insecure values.
 
