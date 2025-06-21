@@ -1,0 +1,28 @@
+name: "lockr Action"
+description: "Scan env/config files for secrets using lockr"
+inputs:
+  path:
+    description: "Path to the file or directory to scan"
+    required: true
+  ruleset:
+    description: "Optional path to custom rules JSON/YAML"
+    required: false
+  redact:
+    description: "Redact secrets in output"
+    required: false
+    default: "false"
+  test:
+    description: "Exit with error if secrets are found"
+    required: false
+    default: "false"
+runs:
+  using: "composite"
+  steps:
+    - name: Run lockr
+      shell: bash
+      run: |
+        chmod +x ./lockr
+        ./lockr ${{ inputs.path }} \
+          ${{ inputs.ruleset && format("--ruleset {0}", inputs.ruleset) || '' }} \
+          ${{ inputs.redact == 'true' && '--redact' || '' }} \
+          ${{ inputs.test == 'true' && '--test' || '' }}
